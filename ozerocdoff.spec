@@ -2,13 +2,12 @@ Name:		ozerocdoff
 Version:	0.4
 Release:	%mkrel 1
 Summary:	Tool for switching modes of Option USB devices
-Group:		System Environment/Base
+Group:		System/Base
 License:	GPL
 URL:		http://www.pharscape.org/ozerocdoff.html
 Source0:	ozerocdoff-%{version}.tar.bz2
 Patch:		ozerocdoff-mda.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-
 
 BuildRequires:  usb-compat-devel
 
