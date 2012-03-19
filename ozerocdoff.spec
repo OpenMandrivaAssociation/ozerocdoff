@@ -1,12 +1,12 @@
 Name:		ozerocdoff
 Version:	0.4
-Release:	%mkrel 1
+Release:	%mkrel 1.1
 Summary:	Tool for switching modes of Option USB devices
 Group:		System/Base
 License:	GPL
 URL:		http://www.pharscape.org/ozerocdoff.html
 Source0:	ozerocdoff-%{version}.tar.bz2
-Patch:		ozerocdoff-mda.patch
+Patch0:		ozerocdoff-mda.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires:  usb-compat-devel
@@ -19,8 +19,7 @@ This is the improved Option software for temporarily disabling ZeroCD and allowi
 
 %prep
 %setup -q
-%apply_patches
-
+%patch0 -p1
 
 %build
 %make
@@ -48,7 +47,7 @@ LIBNAME=%{_lib} %makeinstall_std
 %_sbindir/rezero
 %_sbindir/osetsuspend
 
-%_sysconfdir/udev/rules.d/*-hso-udev.rules
+%_sysconfdir/udev/rules.d/49-hso-udev.rules
 
 %{_libdir}/hal/scripts/hal-serial-hsotype
 %{_datadir}/hal/fdi/preprobe/20thirdparty/10-wwan-hso-preprobe.fdi
