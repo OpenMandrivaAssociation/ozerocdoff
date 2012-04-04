@@ -1,13 +1,17 @@
+%define __debug_package %nil
+%define _enable_debug_packages %{nil}
+%define debug_package          %{nil}
+
 Name:		ozerocdoff
 Version:	0.4
-Release:	%mkrel 1.1
+Release:	%mkrel 1.2
 Summary:	Tool for switching modes of Option USB devices
 Group:		System/Base
 License:	GPL
 URL:		http://www.pharscape.org/ozerocdoff.html
 Source0:	ozerocdoff-%{version}.tar.bz2
 Patch0:		ozerocdoff-mda.patch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Patch1:		ozerocdoff-0.4-udev.patch
 
 BuildRequires:  usb-compat-devel
 
@@ -15,11 +19,14 @@ Obsoletes:      hso-rezero
 
 %description
 Ozerocdoff - an improved ZeroCD switching utility
-This is the improved Option software for temporarily disabling ZeroCD and allowing the modem to be a modem. It has replaced rezero.
+
+This is the improved Option software for temporarily disabling ZeroCD
+and allowing the modem to be a modem. It has replaced rezero.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch0 -p1 -b .mda~
+%patch1 -p1 -b .udev~
 
 %build
 %make
