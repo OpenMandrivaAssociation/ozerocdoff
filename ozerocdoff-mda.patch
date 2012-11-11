@@ -1,0 +1,40 @@
+diff -c --recursive ozerocdoff-0.4/hso.udev ozerocdoff-0.4_mda/hso.udev
+*** ozerocdoff-0.4/hso.udev	2010-02-26 22:10:21.000000000 +0300
+--- ozerocdoff-0.4_mda/hso.udev	2010-11-15 14:43:10.000000000 +0300
+***************
+*** 121,127 ****
+  
+  LABEL="hso_tty_permission"
+  # setup group proper group rights 
+! KERNEL=="ttyHS[0-9]*", NAME="%k", GROUP="dialout", MODE="0660"
+  
+  
+  SUBSYSTEM!="usb", GOTO="hso_end"
+--- 121,127 ----
+  
+  LABEL="hso_tty_permission"
+  # setup group proper group rights 
+! KERNEL=="ttyHS[0-9]*", GROUP="dialout", MODE="0660"
+  
+  
+  SUBSYSTEM!="usb", GOTO="hso_end"
+diff -c --recursive ozerocdoff-0.4/Makefile ozerocdoff-0.4_mda/Makefile
+*** ozerocdoff-0.4/Makefile	2010-02-26 22:10:21.000000000 +0300
+--- ozerocdoff-0.4_mda/Makefile	2010-11-15 14:45:14.000000000 +0300
+***************
+*** 29,35 ****
+  	strip $<
+  	install -D -s $<	$(DESTDIR)/usr/sbin/$<
+  	install -d $(DESTDIR)/etc/udev/rules.d
+! 	cp hso.udev $(DESTDIR)/etc/udev/rules.d/51-hso-udev.rules
+  	install -d $(DESTDIR)/usr/share/hal/fdi/preprobe/20thirdparty
+  	cp 10-wwan-hso-preprobe.fdi $(DESTDIR)/usr/share/hal/fdi/preprobe/20thirdparty
+  	install -d $(DESTDIR)/usr/share/hal/fdi/information/20thirdparty
+--- 29,35 ----
+  	strip $<
+  	install -D -s $<	$(DESTDIR)/usr/sbin/$<
+  	install -d $(DESTDIR)/etc/udev/rules.d
+! 	cp hso.udev $(DESTDIR)/etc/udev/rules.d/49-hso-udev.rules
+  	install -d $(DESTDIR)/usr/share/hal/fdi/preprobe/20thirdparty
+  	cp 10-wwan-hso-preprobe.fdi $(DESTDIR)/usr/share/hal/fdi/preprobe/20thirdparty
+  	install -d $(DESTDIR)/usr/share/hal/fdi/information/20thirdparty
