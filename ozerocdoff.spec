@@ -38,12 +38,6 @@ LIBNAME=%{_lib} %makeinstall_std
 %__ln_s ozerocdoff %{buildroot}%{_sbindir}/rezero
 
 
-%post
-
-
-%preun
-
-
 %clean
 %__rm -rf %{buildroot}
 
