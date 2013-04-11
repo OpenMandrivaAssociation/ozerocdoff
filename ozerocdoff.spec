@@ -4,7 +4,7 @@
 
 Name:		ozerocdoff
 Version:	0.4
-Release:	%mkrel 1.2
+Release:	2
 Summary:	Tool for switching modes of Option USB devices
 Group:		System/Base
 License:	GPL
@@ -33,13 +33,9 @@ and allowing the modem to be a modem. It has replaced rezero.
 
 
 %install
-%__rm -rf %buildroot
 LIBNAME=%{_lib} %makeinstall_std
 %__ln_s ozerocdoff %{buildroot}%{_sbindir}/rezero
 
-
-%clean
-%__rm -rf %{buildroot}
 
 
 %files
