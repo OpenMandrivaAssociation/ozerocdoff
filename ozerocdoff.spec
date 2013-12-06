@@ -5,7 +5,7 @@
 Summary:	Tool for switching modes of Option USB devices
 Name:		ozerocdoff
 Version:	0.4
-Release:	2
+Release:	3
 Group:		System/Base
 License:	GPLv2
 Url:		http://www.pharscape.org/ozerocdoff.html
