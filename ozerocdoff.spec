@@ -1,6 +1,6 @@
 %define __debug_package %nil
 %define _enable_debug_packages %{nil}
-%define debug_package          %{nil}
+%define debug_package %{nil}
 
 Summary:	Tool for switching modes of Option USB devices
 Name:		ozerocdoff
@@ -13,7 +13,7 @@ Source0:	ozerocdoff-%{version}.tar.bz2
 Patch0:		ozerocdoff-mda.patch
 Patch1:		ozerocdoff-0.4-udev.patch
 BuildRequires:	pkgconfig(libusb)
-Obsoletes:      hso-rezero
+Obsoletes:		hso-rezero
 
 %description
 Ozerocdoff - an improved ZeroCD switching utility
