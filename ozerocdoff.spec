@@ -23,7 +23,7 @@ and allowing the modem to be a modem. It has replaced rezero.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %make
