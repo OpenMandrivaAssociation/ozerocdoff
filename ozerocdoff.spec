@@ -8,7 +8,7 @@ Version:	0.4
 Release:	11
 Group:		System/Base
 License:	GPLv2
-Url:		http://www.pharscape.org/ozerocdoff.html
+Url:		https://www.pharscape.org/ozerocdoff.html
 Source0:	ozerocdoff-%{version}.tar.bz2
 Patch0:		ozerocdoff-mda.patch
 Patch1:		ozerocdoff-0.4-udev.patch
