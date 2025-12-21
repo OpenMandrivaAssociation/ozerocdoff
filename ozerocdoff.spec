@@ -12,6 +12,7 @@ Url:		https://www.pharscape.org/ozerocdoff.html
 Source0:	ozerocdoff-%{version}.tar.bz2
 Patch0:		ozerocdoff-mda.patch
 Patch1:		ozerocdoff-0.4-udev.patch
+BuildRequires:	make
 BuildRequires:	pkgconfig(libusb)
 Obsoletes:		hso-rezero
 
